@@ -1,7 +1,7 @@
 import requests
 
 headers={"User-Agent": "Mozilla"}
-emails=input("lista de posibles usuariso: ")
+emails=input("lista de posibles usuarios: ")
 f=open(emails,"r")
 for linea in f:
 	respuesta=requests.get("https://mail.google.com/mail/gxlu?email="+linea[:-1],headers=headers)
